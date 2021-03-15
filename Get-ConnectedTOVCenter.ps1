@@ -88,8 +88,8 @@ $cred=get-credential Rabobank\$env:UserName   -Message "Enter Virtual Center Cre
 
 #$user = $env:USERNAME+"$"
 
-
-  $selectedVCnew= Import-Csv -Path '\\wspe001421\project$\Scripts\ps1\vcenters.csv' `
+  ### Replace location of CSV file with the list of vCenters in your environment 
+  $selectedVCnew= Import-Csv -Path '\\XXXXXX\project$\Scripts\ps1\vcenters.csv' `
   |Select-Object VCenters | Out-GridView  -OutputMode Multiple  -Title " SELECT MULTIPLE  VIRTUAL CENTERS FROM THE  LIST BELOW"     # VCenters
 
 
